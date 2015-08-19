@@ -9,7 +9,7 @@ Order=8
  * Blogger plugin for Cotonti Siena
  * @package Blogger
  * @author Alex - Studio Portal30
- * @copyright Portal30 2010-2013 http://portal30.ru
+ * @copyright Portal30 http://portal30.ru
  */
 defined('COT_CODE') or die('Wrong URL');
 

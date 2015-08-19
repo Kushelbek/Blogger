@@ -36,6 +36,6 @@ rssToHeader=70:radio::1:Add blog rss in site header?
  * Blogger plugin for Cotonti Siena
  * @package Blogger
  * @author Alex - Studio Portal30
- * @copyright Portal30 2010-2013 http://portal30.ru
+ * @copyright Portal30 2010-2015 http://portal30.ru
  */
 defined('COT_CODE') or die('Wrong URL');

@@ -15,7 +15,7 @@
 </div>
 <!-- ENDIF -->
 
-{FILE "{PHP.cfg.themes_dir}/alex-natty-2/warnings.tpl"}
+{FILE "{PHP.cfg.themes_dir}/{PHP.cfg.defaulttheme}/warnings.tpl"}
 
 <!-- IF {LIST_CAT_TEXT} != '' AND {PHP.d} < 2 AND {PHP.dc} < 2 -->
    <div class="content">{LIST_CAT_TEXT}</div>
