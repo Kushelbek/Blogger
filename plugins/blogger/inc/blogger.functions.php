@@ -14,7 +14,7 @@ require_once $cfg['plugins_dir']."/blogger/model/Blog.php";
 require_once cot_incfile('blogger', 'plug', 'resources');
 
 require_once cot_incfile('page', 'module');
-require_once cot_incfile('pfs', 'module');
+if(cot_module_active('pfs')) require_once cot_incfile('pfs', 'module');
 require_once cot_incfile('extensions');
 require_once cot_incfile('structure');
 
