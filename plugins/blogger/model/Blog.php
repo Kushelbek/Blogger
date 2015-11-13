@@ -205,6 +205,8 @@ class Blog extends BlModelAbstract{
      * @param string $tagPrefix Prefix for tags
      * @param bool $cacheitem Cache tags
      * @return array|void
+     *
+     * @todo fixme
      */
     public static function generateTags($coupon, $tagPrefix = '', $cacheitem = true){
         global $cfg, $L;
@@ -213,14 +215,14 @@ class Blog extends BlModelAbstract{
         static $coupon_cache = array();
 
         if (is_null($extp_first)){
-            $extp_first = cot_getextplugins('shop.coupon.tags.first');
-            $extp_main = cot_getextplugins('shop.coupon.tags.main');
+//            $extp_first = cot_getextplugins('shop.coupon.tags.first');
+//            $extp_main = cot_getextplugins('shop.coupon.tags.main');
         }
 
         /* === Hook === */
-        foreach ($extp_first as $pl){
-            include $pl;
-        }
+//        foreach ($extp_first as $pl){
+//            include $pl;
+//        }
         /* ===== */
         if ( is_object($coupon) && is_array($coupon_cache[$coupon->coupon_id]) ) {
             $temp_array = $coupon_cache[$coupon->coupon_id];
@@ -264,10 +266,10 @@ class Blog extends BlModelAbstract{
 //                }
 
                 /* === Hook === */
-                foreach ($extp_main as $pl)
-                {
-                    include $pl;
-                }
+//                foreach ($extp_main as $pl)
+//                {
+//                    include $pl;
+//                }
                 /* ===== */
                 $cacheitem && $coupon_cache[$coupon->coupon_id] = $temp_array;
             }else{

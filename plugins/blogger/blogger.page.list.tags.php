@@ -122,6 +122,10 @@ if (bl_inBlog($c)){
                                                          'text' => $L['blogger']['edit_category'], 'attr' => $blAttr));
             }
         }
+
+        // Blog Owner
+        $t->assign(cot_generate_usertags($currentBlog->owner, 'LIST_BLOGGER_OWNER_'));
+
         $t->assign(array(
             'LIST_BLOGGER_ADD' =>  $blogger_add,
             'LIST_BLOGGER_ADD_URL' => $blogger_add_url,

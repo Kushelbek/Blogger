@@ -30,7 +30,7 @@ class MainController{
         global $t, $cfg, $out, $L, $structure, $sys, $cot_extrafields, $db_structure, $usr, $db, $db_users,
                $db_auth;
 
-        cot_rc_link_footer("{$cfg["plugins_dir"]}/blogger/js/blogger.js");
+        Resources::linkFileFooter("{$cfg["plugins_dir"]}/blogger/js/blogger.js");
 
         $cat = cot_import('cat', 'G', 'TXT');
         $bl_rootCats = explode(',', $cfg['plugin']['blogger']['rootCat']);
@@ -237,7 +237,7 @@ class MainController{
                         if ($tmp != '') $admEmails[] = $tmp;
                         $admEmails = array_unique($admEmails);
 
-                        $email_body .= $L['blogger']['desc'].":";
+                        $email_body = $L['blogger']['desc'].":";
                         $email_body .= "<hr />";
                         $email_body .= $catData['structure_desc'];
                         $email_body .= "<hr /><br />";
